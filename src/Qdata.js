@@ -3,6 +3,7 @@ import Data from './quotes.js'
 import Banner from './Banner'
 import * as domtoimagemore from 'dom-to-image-more'
 import { saveAs } from 'file-saver'
+
 class Qdata extends Component{
   constructor(){
     super()
@@ -18,11 +19,20 @@ class Qdata extends Component{
 
   }
   printDocument() {
-    domtoimagemore.toJpeg(document.getElementById('download'),{quality: 0.95})
-    .then(function (dataUrl) {
-        window.saveAs(dataUrl, 'Quotes4U.jpeg');
+    domtoimagemore.toBlob(document.getElementById('download'),{ height: 1000 * 2,
+    width: 1000 * 2,
+    style: {
+    transform: "scale(" + 2 + ")",
+    transformOrigin: "top left",
+    width: 1000 + "px",
+    height: 1000 + "px",
+}
+})
+    .then(function (blob) {
+        window.saveAs(blob, 'quotes4u.png');
     });
   }
+
   componentDidMount(){
     this.setState({log: true})
     this.setState({log: true})
