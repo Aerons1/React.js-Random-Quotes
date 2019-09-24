@@ -35,6 +35,7 @@ header >h1 {
     filter: brightness(90%);
     display: block;
     width: 100%;
+    filter: blur(20px)
 }
 
 .thumbnail {
@@ -65,7 +66,8 @@ header >h1 {
   font-family: 'Pacifico', cursive;
   text-transform: capitalize;
   color: whitesmoke;
-  opacity:0.7;
+  opacity:1.1;
+  border-bottom: 5px solid #f1c40f;
 filter:alpha(opacity=40);
 text-shadow:-.1em .15em .15em black;
 
@@ -100,6 +102,7 @@ text-shadow:-.1em .15em .15em black;
     display: flex;
     justify-content: center;
     align-items: center;
+  -webkit-min-device-pixel-ratio: 2
 }
 
 .banner {
