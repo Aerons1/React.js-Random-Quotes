@@ -18,9 +18,9 @@ class Qdata extends Component{
 
   }
   printDocument() {
-    domtoimagemore.toBlob(document.getElementById('download'))
-    .then(function (blob) {
-        window.saveAs(blob, 'quotes4u.jpeg');
+    domtoimagemore.toJpeg(document.getElementById('download'),{quality: 0.95})
+    .then(function (dataUrl) {
+        window.saveAs(dataUrl, 'quotes4u.jpeg');
     });
   }
   componentDidMount(){
