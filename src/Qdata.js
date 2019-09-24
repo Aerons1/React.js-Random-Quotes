@@ -19,15 +19,7 @@ class Qdata extends Component{
 
   }
   printDocument() {
-    domtoimagemore.toBlob(document.getElementById('download'),{ height: 1000 * 2,
-    width: 1000 * 2,
-    style: {
-    transform: "scale(" + 2 + ")",
-    transformOrigin: "top left",
-    width: 1000 + "px",
-    height: 1000 + "px",
-}
-})
+    domtoimagemore.toBlob(document.getElementById('download'))
     .then(function (blob) {
         window.saveAs(blob, 'quotes4u.png');
     });
