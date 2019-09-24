@@ -1,4 +1,4 @@
-This project idea goes to scrimba's free react course 
+
 ### `Requirement`
 
 1) ### `Dom to Image more` npm install dom-to-image-more
@@ -6,9 +6,6 @@ This project idea goes to scrimba's free react course
 2) ### `File-saver` npm install file-saver
 
 3) ### `React Router Dom`  npm install react-router-dom
-
-4) ### `React-draggable` npm install react-draggable
-
 
 ## Available Scripts
 
